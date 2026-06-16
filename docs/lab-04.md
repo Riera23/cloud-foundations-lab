@@ -17,14 +17,7 @@ de identidad.
 - Rama de trabajo: `lab-04-tuNombre` creada desde `main`
 - Servicios activos: `docker compose up -d`
 - Verificar LocalStack: `curl -s http://localhost:4566/_localstack/health | python3 -m json.tool`
-- AWS CLI configurado para LocalStack:
-
-```bash
-export AWS_DEFAULT_REGION=us-east-1
-export AWS_ACCESS_KEY_ID=test
-export AWS_SECRET_ACCESS_KEY=test
-alias awslocal="aws --endpoint-url=http://localhost:4566"
-```
+- `awslocal` disponible: viene con `pip install -r requirements.txt` (paquete `awscli-local`)
 
 ---
 

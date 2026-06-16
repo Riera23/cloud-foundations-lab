@@ -2,14 +2,14 @@
 
 Endpoint local: `http://localhost:4566` · cuenta simulada: `000000000000`
 
-## Setup del alias
+## Setup
+
+`awslocal` es un wrapper de `aws` que apunta a LocalStack. Viene instalado con
+`pip install -r requirements.txt` (paquete `awscli-local`).
 
 ```bash
-# Una vez por sesión de terminal
-export AWS_DEFAULT_REGION=us-east-1
-export AWS_ACCESS_KEY_ID=test
-export AWS_SECRET_ACCESS_KEY=test
-alias awslocal="aws --endpoint-url=http://localhost:4566"
+# Verificar que el comando está disponible
+awslocal --version
 
 # Verificar que LocalStack responde
 awslocal sts get-caller-identity
